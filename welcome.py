@@ -1,10 +1,10 @@
-class welcome:
+class Welcome:
     # Welcome class for the hilo program.
 
     def __init__(self):
         pass
 
-    def start():
+    def start()(self):
         # Display program welcome message.
         print ("\n       »»————-　★　————-««")
         print (" ╔═════════════════════════════╗")
@@ -17,7 +17,7 @@ class welcome:
         name = input("\nPlease enter your name: ")
         return name
 
-    def display_rules():
+    def display_rules()(self):
         print ("\nGame Rules:")
         print ("The player starts the game with 300 points.")
         print ("Individual cards are represented as a number from 1 to 13.")
