@@ -4,7 +4,7 @@ class Welcome:
     def __init__(self):
         pass
 
-    def start()(self):
+    def start(self):
         # Display program welcome message.
         print ("\n       »»————-　★　————-««")
         print (" ╔═════════════════════════════╗")
@@ -17,7 +17,7 @@ class Welcome:
         name = input("\nPlease enter your name: ")
         return name
 
-    def display_rules()(self):
+    def display_rules(self):
         print ("\nGame Rules:")
         print ("The player starts the game with 300 points.")
         print ("Individual cards are represented as a number from 1 to 13.")
