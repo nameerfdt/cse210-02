@@ -12,9 +12,7 @@ class welcome:
         print (" ╚═════════════════════════════╝")
         print ("  ✩｡:*•.─────  ❁ ❁  ─────.•*:｡✩")
         print ()
-        print ("Designed by: Alex, Joshua, Tracy,")
-        print ("             Mike, and Mark.")
-
+        print ("Designed by: Alex, Joshua, Tracy, and Mark")
     def get_name():
         name = input("\nPlease enter your name: ")
         return name
