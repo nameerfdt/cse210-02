@@ -9,44 +9,24 @@ class Player:
         guess (string): high/lo (h/l)
     '''
 
-    def __init__(player):
+    def __init__(self):
         '''Constructs a new instance of player.
     
         Args:
             self (Player): an instance of player
         '''
 
-        player.name = ""
-        player.score = 0
-        player.guess = ""
+        self.name = ""
+        self.score = 300
+        self.guess = ""
 
 
-    def name(player):
-        '''Updated the player name.
-    
-        Args:
-            self (Player): an instance of player
-        '''
-
-        player.name = input('What is your name? ')
-        print (player.name.capitalize())
-
-    def score(player):
-        '''Displays starting score.
-        
-        Args:
-            self (Player): an instance of player
-        '''
-
-        # player starts game with 300 points
-        player.score = 300
-
-    def guess(player):
+    def make_guess(self):
         '''Asks player if next card higher or lower
         
         Args:
             self (Player): an instance of player
         '''
 
-        player.guess = input('Higher or Lower: (h/l)')
+        self.guess = input('Higher or Lower: (h/l)')
         
