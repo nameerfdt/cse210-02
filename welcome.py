@@ -13,6 +13,7 @@ class Welcome:
         print ("  ✩｡:*•.─────  ❁ ❁  ─────.•*:｡✩")
         print ()
         print ("Designed by: Alex, Joshua, Tracy, and Mark")
+        
     def get_name():
         name = input("\nPlease enter your name: ")
         return name
