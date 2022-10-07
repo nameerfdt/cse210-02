@@ -27,7 +27,7 @@ class Deck:
         self.card = random.randint(1, 13)
         return self.card
 
-
+#Testing Code
 if __name__ == '__main__':
     deck = Deck()
     print(deck.draw_card())
