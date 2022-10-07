@@ -27,6 +27,11 @@ class Player:
         Args:
             self (Player): an instance of player
         '''
-
-        self.guess = input('Higher or Lower: (h/l)')
+        check_guess = False
+        while not check_guess:
+            self.guess = input('Higher or Lower? (h/l): ')
+            if self.guess.lower() == "h" or self.guess.lower() == "l":
+                check_guess = True
+            else:
+                print("\nThat was not a valid input, please try again.\n")
         

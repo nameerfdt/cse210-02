@@ -38,20 +38,28 @@ class Director:
                 return False
     
     def display_card(self):
-        print(f"\nThe Previous Card is a {self.previous_card}.")
+        print("\n---------------------------------------------------")
+        print(f"\nThe Current Card is a {self.previous_card}.")
         self.player.make_guess()
         self.update_score()
         if self.update_total == 100:
-            print(f"\nYou were correct! 100 points for you {self.player.name}!")
+            print(f"\nYou were correct! You drew a {self.current_card}! 100 points for you {self.player.name}!")
         elif self.update_total == -75:
-            print(f"\nBad luck, you were incorrect! You lose 75 points {self.player.name}.")
+            print(f"\nBad luck, you were incorrect! You drew a {self.current_card}! You lose 75 points {self.player.name}.")
         if self.player.score < 0:
-            self.continue_game == False
+            self.continue_game = False
             print(f"\nSorry, Game Over! Your score went below 0 at a total of {self.player.score} points. Play again sometime!")
         elif self.player.score >= 0:
-            if input(f"\nYour current score is {self.player.score}, {self.player.name}.\nWould you like to continue playing? (y or n): ").lower() == "n":
+            continue_check = False
+            while not continue_check:
+                continue_game = input(f"\nYour current score is {self.player.score}, {self.player.name}.\nWould you like to continue playing? (y or n): ")
+                if continue_game.lower() == "y" or continue_game.lower() == "n":
+                    continue_check = True
+                else:
+                    print("\nThat was not a valid input, please try again.\n")
+            if continue_game.lower() == "n":
                 print(f"\nThanks for playing, {self.player.name}.\nYou ended the game with a total of {self.player.score} points!\nPlease play again sometime!")
-                self.continue_game == False
+                self.continue_game = False
 
     def draw_cards(self):
         if self.previous_card == 0:
