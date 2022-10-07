@@ -25,6 +25,7 @@ class Director:
         self.game()
 
     def compare_card(self):
+        """Compares Cards to see if Player was Correct"""
         guess = self.player.guess
         if guess.lower() == "h":
             if self.current_card >= self.previous_card:
@@ -38,6 +39,7 @@ class Director:
                 return False
     
     def display_card(self):
+        """Displays output to player. Calls other scripts in related."""
         print("\n---------------------------------------------------")
         print(f"\nThe Current Card is a {self.previous_card}.")
         self.player.make_guess()
@@ -62,6 +64,7 @@ class Director:
                 self.continue_game = False
 
     def draw_cards(self):
+        """Calls the deck.draw_card script to draw the needed cards for play."""
         if self.previous_card == 0:
             self.previous_card = self.deck.draw_card()
         else:
@@ -69,6 +72,7 @@ class Director:
         self.current_card = self.deck.draw_card()
     
     def update_score(self):
+        """Calls compare card and changes the added total to what is needed."""
         if self.compare_card():
             self.update_total = 100
         else:
@@ -76,6 +80,7 @@ class Director:
         self.player.score += self.update_total
 
     def game(self):
+        """Loops game commands until continue_game is False."""
         while self.continue_game:
             self.draw_cards()
             self.display_card()
