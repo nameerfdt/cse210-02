@@ -14,7 +14,7 @@ class Welcome:
         print ()
         print ("Designed by: Alex, Joshua, Tracy, and Mark")
         
-    def get_name():
+    def get_name(self):
         name = input("\nPlease enter your name: ")
         return name
 
